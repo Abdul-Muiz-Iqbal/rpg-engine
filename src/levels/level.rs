@@ -28,11 +28,12 @@ impl LevelData {
     /// Create an instance of LevelData given a level and current_experience.
     /// experience_for_next_level is automatically calculated.
     pub fn new(level: u8, current_experience: usize) -> Self {
-        assert!(level < 99); // TODO: Change to proper error handling with thiserror
-        Self {
-            level,
-            current_experience,
-            experience_for_next_level: Self::experience_for_level(level),
+        let experience_for_next_level = Self::experience_for_level(level);
+        match (level >= 1 && level <= 99, current_experience < experience_for_next_level) {
+            (true, true) => Self { level, current_experience, experience_for_next_level },
+            (false, true) => panic!("Level must be between 1 and 99"),
+            (true, false) => panic!("Current experience must be less than experience required for the next level"),
+            (false, false) => panic!("Level must be between 1 and 99 and Current experience must be less than experience required for the next level")
         }
     }
 

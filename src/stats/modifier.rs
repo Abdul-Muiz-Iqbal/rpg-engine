@@ -83,10 +83,11 @@ impl Default for Modifiers {
 
 impl Modifiers {
     #[allow(dead_code)]
+    /// Create a new instance of Modifiers, taking in an Modifier::Plus and Modifier::Mult
     pub fn new(additive: Modifier, multiplicative: Modifier) -> Self {
-        Self {
-            additive,
-            multiplicative,
+        match (additive, multiplicative) {
+            (Modifier::Mult(_), Modifier::Plus(_)) => Self { additive, multiplicative },
+            _ => panic!("additive must be an instance of Modifier::Plus and multiplicative must be an instance of Modifier::Mult")
         }
     }
 

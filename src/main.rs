@@ -8,8 +8,6 @@ use crate::{entities::EntityBuilder, levels::LevelData, stats::Stats};
 
 // TODO:
 // UnitTests, Integration Tests
-// Increase tightness of all types
-// Better error handling via thiserror
 // Better documentation with examples
 // Organization of various models (Especially create_stat_table and Entity)
 
