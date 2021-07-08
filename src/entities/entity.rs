@@ -2,9 +2,12 @@
 
 use crate::{levels::LevelData, stats::Stats};
 
-#[derive(Builder, Debug)]
+#[derive(Builder, Debug, Default, Clone)]
 #[builder(pattern = "owned")]
 pub struct Entity {
-    stats: Stats,
-    level_data: LevelData,
+    pub name: &'static str,
+    pub id: usize,
+    pub stats: Stats,
+    pub level_data: LevelData,
+    // Actions and Equipment
 }

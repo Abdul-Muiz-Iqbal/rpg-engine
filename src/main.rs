@@ -8,7 +8,6 @@ use crate::{entities::EntityBuilder, levels::LevelData, stats::Stats};
 
 // TODO:
 // UnitTests, Integration Tests
-// Better documentation with examples
 // Organization of various models (Especially create_stat_table and Entity)
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {

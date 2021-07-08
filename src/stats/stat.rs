@@ -4,7 +4,7 @@ use crate::stats::{Modifier, Modifiers, StatKind, StatName};
 
 use super::StatGrowth;
 
-#[derive(Debug, PartialEq, PartialOrd)]
+#[derive(Debug, PartialEq, PartialOrd, Clone)]
 #[allow(dead_code)]
 /// Represents a single stat of character. It contains the name, kind,
 /// value and modifiers present on that stat. There are numerous ways

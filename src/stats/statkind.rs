@@ -1,4 +1,4 @@
-#[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Hash)]
+#[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Hash, Clone)]
 #[allow(dead_code)]
 /// Represents the type of a stat. Some stats such as HP are
 /// depletable during battle. It can have a max value of 100 but

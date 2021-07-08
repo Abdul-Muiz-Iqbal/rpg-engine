@@ -2,7 +2,7 @@
 
 use crate::stats::{Stat, StatKind, Stats};
 
-#[derive(Debug, PartialEq, Eq, PartialOrd, Ord, Clone, Copy)]
+#[derive(Debug, Default, PartialEq, Eq, PartialOrd, Ord, Clone, Copy)]
 /// Contains the data a single level stores. This includes the current level,
 /// the current experience an enitity has, and how much experience is required
 /// for the next level.

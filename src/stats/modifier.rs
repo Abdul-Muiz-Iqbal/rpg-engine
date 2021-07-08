@@ -58,7 +58,7 @@ impl SubAssign for Modifier {
     }
 }
 
-#[derive(Debug, PartialEq, PartialOrd)]
+#[derive(Debug, PartialEq, PartialOrd, Clone)]
 #[allow(dead_code)]
 /// A container type of a list of modifiers. It contains two fields each of type
 /// Modifier, which is an enum. additive will always hold an Add variant, while
