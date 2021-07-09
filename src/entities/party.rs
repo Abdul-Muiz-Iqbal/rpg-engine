@@ -11,7 +11,7 @@ pub struct Party {
     active_party: Vec<Entity>,
     /// The party members who are `reserved` and do not participate in battles unless
     /// switched out.
-    reserved_party: Vec<Entity>
+    reserved_party: Vec<Entity>,
 }
 
 impl Party {
@@ -19,7 +19,10 @@ impl Party {
     /// Make sure that the active party length is less than or equal to four.
     pub fn new(active_party: Vec<Entity>, reserved_party: Vec<Entity>) -> Self {
         if active_party.len() <= 4 {
-            Self { active_party, reserved_party }
+            Self {
+                active_party,
+                reserved_party,
+            }
         } else {
             panic!("There can only be four active party members.");
         }

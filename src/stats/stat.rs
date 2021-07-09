@@ -81,6 +81,8 @@ impl Stat {
     /// modifiers and firstly adds them to the base stat. Then secondly it multiplies
     /// the multiplicative modifiers. This ensures that every stat buff/debuff is
     /// going to be meaningful. Doing it in the reverse order will reduce the effect.
+    /// Note: Modifiers only affect the current value of StatKind::Depletable. This
+    /// means that temporary increases in HP or MP are not possible as of now.
     pub fn value(&self) -> f64 {
         // Get the current value of the stat regardless of its kind.
         let mut current_value = self.base() as f64;

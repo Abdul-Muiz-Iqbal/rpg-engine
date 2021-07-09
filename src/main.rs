@@ -2,6 +2,7 @@
 extern crate derive_builder;
 mod entities;
 mod levels;
+mod misc;
 mod stats;
 
 use crate::{entities::EntityBuilder, levels::LevelData, stats::Stats};

@@ -1,7 +1,7 @@
 use crate::stats::{Stat, StatGrowth, StatKind, StatName};
 use std::ops::{Index, IndexMut};
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, PartialEq)]
 /// Represents the stats of an entity. Certain restrictions are placed upon
 /// this struct, such that Vec<Stats>.len() == StatNameVariants. It contains
 /// a list of all valid stats that an entity can have.

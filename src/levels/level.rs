@@ -29,7 +29,7 @@ impl LevelData {
     /// experience_for_next_level is automatically calculated.
     pub fn new(level: u8, current_experience: usize) -> Self {
         let experience_for_next_level = Self::experience_for_level(level);
-        match (level >= 1 && level <= 99, current_experience < experience_for_next_level) {
+        match ((1..=99).contains(&level), current_experience < experience_for_next_level) {
             (true, true) => Self { level, current_experience, experience_for_next_level },
             (false, true) => panic!("Level must be between 1 and 99"),
             (true, false) => panic!("Current experience must be less than experience required for the next level"),
